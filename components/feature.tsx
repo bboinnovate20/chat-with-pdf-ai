@@ -2,6 +2,7 @@
 import useScrollAnimation from '@/util/useScrollAnimation';
 import { Layers3 } from 'lucide-react'
 import React from 'react'
+import SectionHeader from './section-header';
 
 export default function CustomSingleFeature({title, icon, content}: {title: string, icon: React.ReactNode, content: string}) {
   return (
@@ -33,6 +34,7 @@ export function Features ({features}: {features: any[]}) {
    return (
     <div >
       {/* <CustomSingleFeature/> */}
+      <SectionHeader/>
       <dl className='md:grid grid-flow-row md:grid-cols-2 lg:grid-cols-3 gap-4  '>
         {features.map(({title, icon, content}, index) => 
             <dt key={index} ref={(el: HTMLElement) => { ref.current[index] = el; }}

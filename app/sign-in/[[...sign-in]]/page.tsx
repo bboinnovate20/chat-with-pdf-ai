@@ -35,15 +35,7 @@ function SignInSection() {
                 <OtherStrategy isLayout='up'/>
                 <div className='mt-5 max-w-[400px] md:w-[400px] '>
     
-
-                  <Clerk.Field name="identifier" className='mt-5'>
-                    <Clerk.Label aria-placeholder='imusa@gmail.com' className='font-semibold pb-2'>Email</Clerk.Label>
-                    <Clerk.Input placeholder='e.g. imusa@gmail.com' className='transition-all w-full  border-solid border rounded p-2 focus:to-blue-950' />
-                    <Clerk.FieldError  >
-                      {({message}) => <p className='text-red-700 py-2 text-sm'>{message}</p>}
-                      </Clerk.FieldError>
-                  </Clerk.Field>
-                  
+                <ClerkFormGroup name="identifier" label='Email' placeholder='e.g. imusa229@gmail.com'/>
 
                   <SignIn.Action submit 
                     className='w-full bg-blue-900 h-12 rounded p-2 py-3 my-3 text-white hover:bg-blue-700 transition-all grid place-content-center'>
@@ -70,29 +62,14 @@ function SignInSection() {
                 <h1 className='font-medium text-lg tracking-tight mb-10'>Welcome <SignIn.Salutation />!</h1>
               </div>
               <div  className='w-full text-left'>
-                  <Clerk.Field name="password">
-                    <Clerk.Label aria-placeholder='password' className='font-semibold pb-2 '>Password</Clerk.Label>
-                    <Clerk.Input placeholder='password' className='my-2 transition-all w-full  border-solid border rounded p-2 focus:to-blue-950'/>
-                    <Clerk.FieldError  >
-                      {({message}) => <p className='text-red-700 py-2 text-sm'>{message}</p>}
-                      </Clerk.FieldError>
-                  </Clerk.Field>
-
-                  <SignIn.Action navigate="forgot-password" className='w-full text-right text-red-500'>
+                  
+                  <ClerkFormGroup name="password" label='Password' placeholder='Enter your password'/>
+              
+                  <SignIn.Action navigate="forgot-password" className='w-full text-right text-blue-800'>
                     <div className=''>Forget Password</div>  
                   </SignIn.Action>
-                      
-                      <SignIn.Action submit 
-                      className='w-full bg-blue-900 h-12 rounded p-2 py-3 my-3 text-white hover:bg-blue-700 transition-all grid place-content-center'>
-                        <Clerk.Loading>
-                              {(isLoading) => !isLoading ? "Let's continue the Magic!" : <Image
-                                src="/icons/spinner.svg"
-                                width={40}
-                                height={40}
-                                alt='spinner'
-                              />}
-                    </Clerk.Loading>
-                  </SignIn.Action>
+                  
+                  <ClerkSubmit label="Let's continue the Magic!"/>
                 </div> 
               </SignIn.Strategy>                 
               

@@ -7,7 +7,7 @@ export default function DashboardLayout({
 }: Readonly<{children: React.ReactNode}>) {
 
     return (
-        <ClerkProvider> 
+
             <html lang="en">
             <body className="max-w-7xl m-auto min-h-screen overflow-x-hidden flex flex-col p-0">
                 <Header/>
@@ -16,6 +16,5 @@ export default function DashboardLayout({
                 </main>
             </body>
             </html>
-        </ClerkProvider>
     )
 }

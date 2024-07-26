@@ -8,7 +8,9 @@ export function ClerkFormGroup({label, placeholder, name}: {label: string, place
   return (
     <Clerk.Field name={name} className='mt-5'>
                   <Clerk.Label aria-placeholder={placeholder} className='font-semibold pb-2'>{label}</Clerk.Label>
-                  <Clerk.Input placeholder={placeholder} className='bg-white outline-none focus:border-primary focus:shadow-md focus:shadow-blue-100 transition-all w-full  border-solid border rounded p-2 focus:to-blue-950' />
+                  <Clerk.Input placeholder={placeholder} className='bg-white outline-none focus:border-primary 
+                  focus:shadow-md focus:shadow-blue-100 transition-all w-full  
+                  border-solid border rounded p-2 focus:to-blue-950 dark:bg-white dark:text-black text-black' />
                   <Clerk.FieldError  >
                     {({message}) => <p className='text-red-700 py-2 text-sm'>{message}</p>}
                     </Clerk.FieldError>

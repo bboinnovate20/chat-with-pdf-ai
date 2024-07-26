@@ -28,9 +28,7 @@ export default function FileUploader() {
         <div className='flex flex-col gap-4 items-center max-w-7xl mx-auto'>
             <div {...getRootProps()} className={`p-10 border-2 border-dashed border-primary dark:border-gray-400 mt-10 w-[90%] 
                     text-primary rounded-lg h-96 flex flex-items-center justify-center items-center
-                    dark:bg-gray-500 dark:text-black 
-                    ${isFocused || isDragActive ? 'bg-gradient-to-r from-blue-400 to-blue-200': 'bg-blue-100'}
-                    `}>
+                    dark:bg-gray-500 dark:text-black ${isFocused || isDragActive ? 'bg-gradient-to-r from-blue-400 to-blue-200': 'bg-blue-100'}`}>
             <input {...getInputProps()} />
             <div>
                 {
@@ -42,7 +40,7 @@ export default function FileUploader() {
                     :
                     <div className="grid place-content-center place-items-center text-center">
                         <CircleArrowDownIcon className='h-14 w-14 animate-bounce'/>
-                        <p className="font-semibold">Drag 'n' drop some files here, or click to select files</p>
+                        <p className="font-semibold">Drag and drop some files here, or click to select files</p>
                     </div>
                 }
 

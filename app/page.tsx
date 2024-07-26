@@ -93,7 +93,7 @@ const MainHeadline = () => (
               <UserSteps/>
             </div>
             
-            <Link href="/dashboard"  className={buttonVariants({ variant: "default", className: "p-10 py-6 w-full  md:w-72 md:py-7" })}>Get Started</Link>
+            <Link href="/dashboard"  className={buttonVariants({ variant: "default", className: "p-10 py-6 w-full  md:w-72 md:py-7 text-white" })}>Get Started</Link>
           </div>
           <div className="hidden md:grid object-cover  place-content-center">
               <Image

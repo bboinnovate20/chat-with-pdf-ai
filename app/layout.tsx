@@ -26,7 +26,7 @@ export default function RootLayout({
     
       <html lang="en" className={font.className} >
         
-        <body className="max-w-7xl m-auto min-h-screen overflow-x-hidden flex flex-col p-0">
+        <body className="max-w-7xl m-auto min-h-screen overflow-x-hidden flex flex-col p-0 text-black">
         <ThemeProvider
             attribute="class"
             defaultTheme="system"
